@@ -1,15 +1,19 @@
 //menu item clicks
-const classname = document.getElementsByClassName("itemSpan");
 const itemClick = function() 
 {
     alert("nothing for now");
 };
 
-for (var i = 0; i < classname.length; i++) 
+const addEventListenersForMenuItems = function ()
 {
-    classname[i].addEventListener('click', itemClick, false);
-}
-//calculator
+	const classname = document.getElementsByClassName("itemSpan");
+	for (var i = 0; i < classname.length; i++) 
+	{
+		classname[i].addEventListener('click', itemClick, false);
+	}
+};
+addEventListenersForMenuItems();
+	//calculator
 const printBtnClick = function ()
 {
 	const input = document.getElementById("numInput").value;
@@ -27,4 +31,19 @@ function notifyUser(input)
 	print[0].checked ? alert(input) : "" ;
 	print[1].checked ? document.write(input) : "" ;
 	print[2].checked ? console.log(input) : "" ;
+}
+
+const addMenuItem = function()
+{
+	const itemText = document.getElementById('newMenuItemName').value;
+	if (itemText !== '')
+	{
+		const element = document.createElement("span");
+		document.getElementById('menu')
+		.appendChild(document.createElement("li"))
+		.appendChild(element)
+		.appendChild(document.createTextNode(itemText));
+		element.className = 'itemSpan';
+		addEventListenersForMenuItems();
+	}
 }

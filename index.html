@@ -3,6 +3,7 @@
 	<head>
 		<title>Homework 2</title>
 		<link rel="stylesheet" type="text/css" href="styles/styles.css">
+		<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
 	</head>
 	<body>
 		<div id="wrapper">
@@ -11,18 +12,24 @@
 					<li><span class="itemSpan">custom menu item 1</span></li>
 					<li><span class="itemSpan">custom menu item 2</span></li>
 					<li><span class="itemSpan">custom menu item 3</span></li>
-				<ul>
+				</ul>
 			</div>
 			<div id="divider"></div>
 		<div id="arithmetic">
-			<h3>print values</h3>
-			<h3>// you can print strings and numbers. also arithmetics.  </h3>
-			<input id="numInput" placeholder="type numbers here" type="text">
+			<h3>Print values</h3>
+			<p>// you can print strings and numbers. also arithmetics.  </p>
+			<input class="txtInput" id="numInput" placeholder="type numbers here" type="text">
 			<br><br>
 			<input class="print" type="checkbox"  value="alert" checked> alert 
 			<input class="print" type="checkbox"  value="document.write"> document.write
 			<input class="print" type="checkbox"  value="console.log"> console.log<br>
 			<button onclick="printBtnClick()" class="operation">print</button>
+		</div>
+		<div class="menuItems">
+			<h3>Menu Items</h3>
+			<p>//add custom menu items here</p>
+			<input class="txtInput" id="newMenuItemName" placeholder="type menu item names here" type="text"><br>
+			<button class="operation" onclick="addMenuItem()">add</button>
 		</div>
 		<script src="scripts/homework2.js"></script
 	</body>
